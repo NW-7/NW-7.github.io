@@ -17,6 +17,7 @@
         trackLinks:true,
         accurateTrackBounce:true
    });
+    <!-- мгновенный вход, не знаю, куда его нужно вставлять -->
     window.YaAuthSuggest.init(
     {
       client_id: "ff3a3ccbccdc497cb5942f7d8f6ad728",
@@ -29,6 +30,7 @@
   .then(({handler}) => handler())
   .then(data => console.log('Сообщение с токеном', data))
   .catch(error => console.log('Обработка ошибки', error))
+    <!-- /мгновенный вход, не знаю, куда его нужно вставлять -->
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/101023187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
