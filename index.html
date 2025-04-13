@@ -17,6 +17,18 @@
         trackLinks:true,
         accurateTrackBounce:true
    });
+    window.YaAuthSuggest.init(
+    {
+      client_id: "ff3a3ccbccdc497cb5942f7d8f6ad728",
+      response_type: "token",
+      redirect_uri: "https://oauth.yandex.ru/verification_code"
+    },
+    "https://oauth.yandex.ru",
+    { view: "default" }
+  )
+  .then(({handler}) => handler())
+  .then(data => console.log('Сообщение с токеном', data))
+  .catch(error => console.log('Обработка ошибки', error))
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/101023187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
