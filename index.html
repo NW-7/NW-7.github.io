@@ -22,11 +22,27 @@
                    redirect_uri: "https://oauth.yandex.ru/verification_code"
     },
     "https://oauth.yandex.ru",
-    { view: "default" }
-  )
-  .then(({handler}) => handler())
-  .then(data => console.log('Сообщение с токеном', data))
-  .catch(error => console.log('Обработка ошибки', error))
+    {
+                  view: 'button',
+                  parentId: 'container',
+                  buttonView: 'main',
+                  buttonTheme: 'light',
+                  buttonSize: 'm',
+                  buttonBorderRadius: 0
+               }
+            )
+            .then(function(result) {
+               return result.handler()
+            })
+            .then(function(data) {
+               console.log('Сообщение с токеном: ', data);
+               document.body.innerHTML += `Сообщение с токеном: ${JSON.stringify(data)}`;
+            })
+            .catch(function(error) {
+               console.log('Что-то пошло не так: ', error);
+               document.body.innerHTML += `Что-то пошло не так: ${JSON.stringify(error)}`;
+            });
+      };
     </script>
  </body>
  
