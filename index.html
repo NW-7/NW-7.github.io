@@ -1,41 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-token-with-polyfills-latest.js"></script>
-</head>
-<body>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторные работы по Python</title>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(101023187, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-    <!-- мгновенный вход, не знаю, куда его нужно вставлять -->
-    window.YaAuthSuggest.init(
-    {
-      client_id: "ff3a3ccbccdc497cb5942f7d8f6ad728",
-      response_type: "token",
-      redirect_uri: "https://oauth.yandex.ru/verification_code"
-    },
-    "https://oauth.yandex.ru",
-    { view: "default" }
-  )
-  .then(({handler}) => handler())
-  .then(data => console.log('Сообщение с токеном', data))
-  .catch(error => console.log('Обработка ошибки', error))
-    <!-- /мгновенный вход, не знаю, куда его нужно вставлять -->
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/101023187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-</body>
-
-</html>
+       ym(101029018, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101029018" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <style>
+    :root {
+        --primary-color: #6366F1;  /* Индиго */
+        --secondary-color: #4F46E5; /* Более насыщенный индиго */
+        --accent-color: #EF4444;    /* Красный */
+        --background-color: #F8FAFC; /* Светло-серый фон */
+        --card-color: #FFFFFF;
+        --text-color: #1E293B;
+    }
+    
+    body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        line-height: 1.5;
+    }
+    
+    header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 0 0 2rem 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 4rem 0;
+    }
+    
+    .container {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    
+    .labs-container {
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .lab-card {
+        background: var(--card-color);
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid var(--accent-color);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .lab-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .lab-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-color);
+        gap: 0.75rem;
+    }
+    
+    .lab-title::before {
+        content: "🔗";
+        color: var(--accent-color);
+        font-weight: normal;
+    }
+    
+    .lab-link {
+        background: var(--accent-color);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        gap: 0.5rem;
+        box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+    }
+    
+    .lab-link:hover {
+        background: #DC2626;
+        transform: scale(1.05);
+    }
+    
+    footer {
+        margin-top: 4rem;
+        padding: 2rem 0;
+        color: #64748B;
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+        
+        header {
+            padding: 3rem 0;
+            border-radius: 0 0 1.5rem 1.5rem;
+        }
+        
+        h1 {
+            font-size: 1.875rem;
+        }
+    }
+</style>
