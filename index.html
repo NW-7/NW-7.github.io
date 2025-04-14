@@ -19,29 +19,14 @@
        window.YaAuthSuggest.init({
                    client_id: 'ff3a3ccbccdc497cb5942f7d8f6ad728',
                    response_type: 'token',
-                   redirect_uri: 'https://examplesite.com/suggest/token'
-                },
-                'https://examplesite.com', {
-                   view: 'button',
-                   parentId: 'container',
-                   buttonView: 'main',
-                   buttonTheme: 'light',
-                   buttonSize: 'm',
-                   buttonBorderRadius: 0
-                }
-             )
-             .then(function(result) {
-                return result.handler()
-             })
-             .then(function(data) {
-                console.log('Сообщение с токеном: ', data);
-                document.body.innerHTML += `Сообщение с токеном: ${JSON.stringify(data)}`;
-             })
-             .catch(function(error) {
-                console.log('Что-то пошло не так: ', error);
-                document.body.innerHTML += `Что-то пошло не так: ${JSON.stringify(error)}`;
-             });
-       };
+                   redirect_uri: https://oauth.yandex.ru/verification_code"
+    },
+    "https://oauth.yandex.ru",
+    { view: "default" }
+  )
+  .then(({handler}) => handler())
+  .then(data => console.log('Сообщение с токеном', data))
+  .catch(error => console.log('Обработка ошибки', error))
     </script>
  </body>
  
