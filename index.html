@@ -27,145 +27,108 @@
     </noscript>
     <!-- /Yandex.Metrika -->
 
-    <style>
-    :root {
-        --primary-color: #2ECC71;   /* Ярко-зелёный */
-        --secondary-color: #27AE60; /* Тёмно-зелёный */
-        --accent-color: #E67E22;    /* Оранжевый */
-        --background-color: #FDF2E9;
-        --card-color: #FFFFFF;
-        --text-color: #2C3E50;
-    }
-
-    body {
-        font-family: 'Roboto', 'Open Sans', system-ui, sans-serif;
-        background: var(--background-color) radial-gradient(circle at 10% 20%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
-    }
-
-    header {
-        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-        border-radius: 0 0 3rem 3rem;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        padding: 5rem 0 7rem 0;
-        margin-bottom: -3rem;
-    }
-
-    .container {
-        max-width: 1100px;
-        padding: 0 1.5rem;
-    }
-
-    .labs-container {
-        gap: 1.5rem;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .lab-card {
-        background: var(--card-color);
-        border-radius: 1.5rem;
-        padding: 1.8rem;
-        border-top: 5px solid var(--accent-color);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .lab-card::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, transparent, rgba(230,126,34,0.1));
-        transform: rotate(45deg);
-        transition: all 0.4s;
-    }
-
-    .lab-card:hover {
-        transform: rotate(-1deg) scale(1.02);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-
-    .lab-card:hover::before {
-        top: -20%;
-        left: -20%;
-    }
-
-    .lab-title {
-        font-size: 1.3rem;
-        gap: 1rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .lab-title::before {
-        content: "📌";
-        font-size: 1.4em;
-        filter: hue-rotate(45deg);
-    }
-
-    .lab-link {
-        background: linear-gradient(135deg, var(--accent-color), #D35400);
-        padding: 0.8rem 2rem;
-        border-radius: 0.8rem;
-        font-weight: 600;
-        gap: 0.8rem;
-        box-shadow: 0 3px 6px rgba(230,126,34,0.3);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .lab-link::after {
-        content: "→";
-        position: absolute;
-        right: -20px;
-        transition: all 0.3s;
-    }
-
-    .lab-link:hover {
-        transform: translateX(10px);
-        background: linear-gradient(135deg, #D35400, var(--accent-color));
-    }
-
-    .lab-link:hover::after {
-        right: 15px;
-    }
-
-    footer {
-        background: rgba(255,255,255,0.9);
-        margin-top: 5rem;
-        padding: 2.5rem 0;
-        box-shadow: 0 -5px 15px rgba(0,0,0,0.03);
-        border-radius: 3rem 3rem 0 0;
-    }
-
-    footer::before {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: var(--accent-color);
-        margin: 0 auto 1.5rem;
-        border-radius: 2px;
-    }
-
-    @media (max-width: 900px) {
-        header {
-            padding: 4rem 0 6rem 0;
-            border-radius: 0 0 2rem 2rem;
-        }
-        
-        .lab-card {
-            padding: 1.5rem;
-            border-radius: 1rem;
-        }
-        
-        .lab-link {
-            padding: 0.7rem 1.5rem;
-        }
-    }
-</style>
+   <style>
+         :root {
+             --primary-color: #6366F1;
+             --secondary-color: #4F46E5;
+             --accent-color: #EF4444;
+             --background-color: #F8FAFC;
+             --card-color: #FFFFFF;
+             --text-color: #1E213D;
+         }
+ 
+         body {
+             font-family: 'Inter', system-ui, -apple-system, sans-serif;
+             line-height: 1.5;
+             background: #eee;
+         }
+ 
+         header {
+             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+             border-radius: 0 0 2rem 2rem;
+             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+             padding: 4rem 0;
+         }
+ 
+         .container {
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 0 2rem;
+         }
+ 
+         .labs-container {
+             display: grid;
+             gap: 2rem;
+             margin: 2rem 0;
+         }
+ 
+         .lab-card {
+             background: var(--card-color);
+             border-radius: 1rem;
+             padding: 2rem;
+             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+             border-left: 4px solid var(--accent-color);
+             transition: transform 0.2s ease, box-shadow 0.2s ease;
+         }
+ 
+         .lab-card:hover {
+             transform: translateY(-4px);
+             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+         }
+ 
+         .lab-title {
+             font-size: 1.25rem;
+             font-weight: 600;
+             color: var(--text-color);
+             display: flex;
+             align-items: center;
+             gap: 0.75rem;
+             margin: 0 0 1rem 0;
+         }
+ 
+         .lab-title::before {
+             content: "🔗";
+             color: var(--accent-color);
+             font-weight: normal;
+         }
+ 
+         .lab-link {
+             display: inline-flex;
+             align-items: center;
+             background: var(--accent-color);
+             color: white;
+             text-decoration: none;
+             padding: 0.75rem 1.5rem;
+             border-radius: 0.5rem;
+             font-weight: 500;
+             gap: 0.5rem;
+             box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+             transition: background 0.2s ease, transform 0.2s ease;
+         }
+ 
+         .lab-link:hover {
+             background: #DC2626;
+             transform: scale(1.05);
+         }
+ 
+         footer {
+             margin-top: 4rem;
+             padding: 2rem 0;
+             text-align: center;
+             color: #64748B;
+         }
+ 
+         @media (max-width: 768px) {
+             header {
+                 padding: 3rem 0;
+                 border-radius: 0 0 1.5rem 1.5rem;
+             }
+ 
+             h1 {
+                 font-size: 1.875rem;
+             }
+         }
+     </style>
    
 </head>
 
