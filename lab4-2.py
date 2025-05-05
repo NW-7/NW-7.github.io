@@ -7,8 +7,9 @@ def read_genbank(file_path):
     with open(file_path, "r") as handle:
         for record in SeqIO.parse(handle, "genbank"):
             sequence = str(record.seq).upper()  # Последовательность в верхнем регистре
-            gc = gc_fraction(sequence) * 100  # GC-состав в процентах
-            records.append((gc, sequence, record.id))
+            gc = gc_fraction(sequence)
+            description = " ".join(record.description.split())            
+            records.append((gc, sequence, record.id,description))
     return records
 
 
@@ -20,10 +21,10 @@ def main():
     sorted_records = sorted(records, key=lambda x: x[0])
 
     # Вывод результатов
-    for gc, seq, seq_id in sorted_records:
-        print(f"ID: {seq_id}")
-        print(f"GC-состав: {gc:.2f}%")
+    for gc, seq, seq_id, description in sorted_records:
+        print(f"{seq_id}: {description}, GC = {gc}")
         print(f"Последовательность (первые 50 символов): {seq[:50]}...\n")
+
 
 
 if __name__ == "__main__":
