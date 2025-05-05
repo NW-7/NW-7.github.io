@@ -24,8 +24,6 @@ def main():
     for gc, seq, seq_id, description in sorted_records:
         print(f"{seq_id}: {description}, GC = {gc}")
         print(f"Последовательность (первые 50 символов): {seq[:50]}...\n")
-
-
-
+        
 if __name__ == "__main__":
     main()
