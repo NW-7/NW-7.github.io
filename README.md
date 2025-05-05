@@ -82,8 +82,323 @@ Expected dominant offspring: 3.50000
   - Гибкость: параметры легко модифицировать.  
   - Масштабируемость: добавление новых функций не нарушит существующую структуру.
 ---
+## Лабораторная работа 2: РАБОТА С ФАЙЛАМИ В PYTHON  Вариант 1. Вычисление GC-состава
+### Цель
+Нахождение последовательности ДНК с наибольшим GC-составом в формате FASTA
+### Задачи
+1. Разделить входные данные на записи, каждая из которых начинается с '>'.
+2. Для каждой записи извлечь идентификатор и последовательность ДНК.
+3. Для каждой последовательности посчитать GC-состав.
+4. Найти запись с максимальным GC-составом.
+5. Вывести идентификатор и процент с точностью до шести знаков, как в примере
+### Ход работы
+**Чтение данных:** Используется sys.stdin.read() для получения всех входных данных.
+
+**Разделение записей:** Данные делятся по символу >, после чего игнорируется пустая строка перед первой записью.
+
+**Обработка записей:**
+
+**Идентификатор:** Извлекается из первой строки записи.
+
+**Последовательность ДНК:** Объединяется из оставшихся строк, удаляются пробелы и переводы строк. Регистр символов приводится к верхнему для универсальности.
+
+**Расчет GC-состава:** Функция calculate_gc считает количество символов G и C, вычисляет их долю в процентах.
+
+**Поиск максимума:** Сравнивается GC-состав всех последовательностей, сохраняется максимальное значение и соответствующий идентификатор.
+
+**Вывод:** Результат форматируется до шести знаков после запятой.
+
+``` python
+import sys
+
+def calculate_gc(sequence):
+    gc = sequence.count('G') + sequence.count('C')
+    total = len(sequence)
+    return (gc / total) * 100 if total > 0 else 0.0
+
+def main():
+    # Проверяем, есть ли аргументы командной строки
+    if len(sys.argv) > 1:
+        # Чтение из файла
+        filename = sys.argv[1]
+        with open(filename, 'r') as file:
+            content = file.read().strip()
+    else:
+        # Чтение из stdin
+        content = sys.stdin.read().strip()
+    
+    records = content.split('>')[1:]
+    
+    max_gc = -1.0
+    max_id = ""
+    
+    for record in records:
+        lines = record.split('\n')
+        header = lines[0].strip()
+        sequence = ''.join(line.strip().upper() for line in lines[1:] if line.strip())
+        
+        gc_percent = calculate_gc(sequence)
+        
+        if gc_percent > max_gc:
+            max_gc = gc_percent
+            max_id = header
+    
+    print(max_id)
+    print(f"{max_gc:.6f}")
+
+if __name__ == "__main__":
+    main()
+```
+### Вывод
++ sys.stdin.read() не требует указания имени файла — данные читаются из стандартного ввода.
++ Для чтения из конкретного файла используtncz sys.argv и open().
++ Универсальный код обрабатывает оба сценария.
 
 
+---
+## Лабораторная работа 3: ПРЕДСТАВЛЕНИЕ ДАННЫХ В PYTHON
+### Цель работы
+Освоение методов визуализации данных в Python с использованием библиотеки matplotlib и дополнительных инструментов (seaborn, statsmodels):
+1. Построение диаграммы рассеяния для анализа взаимосвязи между признаками с цветовой дифференциацией классов.
+2. Создание графиков временных рядов для изучения динамики изменений данных.
+
+### Задания
+
+### Задание 1. Диаграмма рассеяния
+
+#### 1. **Установка необходимых библиотек** -- инструменты
+Для работы с данными и визуализацией потребуются:
+- `scikit-learn` (для загрузки набора данных `breast_cancer`),
+- `pandas` (для работы с табличными данными),
+- `matplotlib` или `seaborn` (для построения графиков).
+#### 2. **Загрузка данных**
+Набор данных `breast_cancer` содержит информацию о опухолях молочной железы.  
+**Структура данных:**
+- **Факторы (признаки):** `mean radius`, `mean texture` и другие (30 числовых признаков).
+- **Целевая переменная (`target`):** 
+  - `0` — злокачественная опухоль (malignant),
+  - `1` — доброкачественная опухоль (benign).
+
+**Код для загрузки данных:**
+```python
+from sklearn.datasets import load_breast_cancer
+import pandas as pd
+
+# Загрузка данных
+data = load_breast_cancer()
+df = pd.DataFrame(data.data, columns=data.feature_names)
+
+# Добавляем целевую переменную (классы) в таблицу
+df['target'] = data.target
+
+# Выводим первые 5 строк таблицы
+print(df.head())
+```
+
+---
+
+#### 3. **Просмотр данных**
+- **Проверка столбцов:**
+  ```python
+  print("Столбцы таблицы:", df.columns.tolist())
+  ```
+  Убедитесь, что в списке есть `mean radius`, `mean texture` и `target`.
+
+- **Описание данных:**
+  ```python
+  print(data.DESCR)  # Выводит описание набора данных
+  ```
+
+- **Статистика по данным:**
+  ```python
+  print(df[['mean radius', 'mean texture', 'target']].describe())
+  ```
+
+#### Код для построения диаграммы рассеяния
+
+#### 1. **Импорт библиотек**
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+#### 2. **Построение графика**
+```python
+# Настройка стиля
+sns.set_style("whitegrid")
+
+# Создание диаграммы рассеяния с цветовым кодированием
+plt.figure(figsize=(10, 6))
+sns.scatterplot(
+    x='mean radius', 
+    y='mean texture', 
+    hue='target', 
+    data=df, 
+    palette={0: 'red', 1: 'green'},  # Цвета для классов
+    alpha=0.7  # Прозрачность маркеров
+)
+
+# Подписи осей и заголовок
+plt.xlabel('Mean Radius')
+plt.ylabel('Mean Texture')
+plt.title('Диаграмма рассеяния: Mean Radius vs Mean Texture')
+
+# Легенда
+plt.legend(title='Class', labels=['Malignant (0)', 'Benign (1)'])
+
+# Отображение графика
+plt.show()
+```
+#### Результат - график, где
+- **Ось X:** Средний радиус опухоли (`mean radius`),
+- **Ось Y:** Средняя текстура опухоли (`mean texture`),
+- **Красные точки:** Злокачественные опухоли (класс `0`),
+- **Зеленые точки:** Доброкачественные опухоли (класс `1`).
+#### Алгоритм:
+ - Использование sns.scatterplot с параметрами:
+---
+### Задание 2. График временных рядов
+
+### Решение задания 2: Построение графика динамики временных рядов
+
+#### 1. **Импорт библиотек и загрузка данных**
+Для работы с данными и визуализацией потребуются:
+- `statsmodels` (для загрузки набора данных `copper`),
+- `pandas` (для работы с табличными данными),
+- `matplotlib` (для построения графиков).
+
+```python
+import statsmodels.api as sm
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Загрузка набора данных 'copper'
+data = sm.datasets.copper.load_pandas()
+df = data.data  # Получаем DataFrame
+```
+
+---
+
+#### 2. **Просмотр данных**
+Проверим структуру данных и доступные столбцы:
+```python
+print("Столбцы таблицы:", df.columns.tolist())
+print("\nПервые 5 строк данных:")
+print(df.head())
+```
+
+Вывод должен показать наличие столбцов:
+- `WORLDCONSUMPTION` (мировое потребление меди),
+- `COPPERPRICE` (цена на медь),
+- `ALUMPRICE` (цена на алюминий),
+- `TIME` (временная метка, например, год).
+
+---
+
+#### 3. **Фильтрация данных за 1961–1970 годы**
+```python
+# Добавление столбца`YEAR` со значениями 1951-1960 
+df = df.assign(YEAR = df.TIME + 1950)
+# Фильтрация данных по годам
+filtered_df = df[(df['YEAR'] >= 1961) & (df['YEAR'] <= 1970)]
+
+# Проверка
+print("Данные за 1961–1970 годы:")
+print(filtered_df[['YEAR', 'WORLDCONSUMPTION', 'COPPERPRICE', 'ALUMPRICE']])
+```
+
+---
+
+#### 4. **Построение графика**
+Используем `matplotlib` для визуализации временных рядов:
+
+```python
+import statsmodels.api as sm
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Загрузка данных
+data = sm.datasets.copper.load_pandas()
+df = data.data
+
+# Фильтрация данных за 1961–1970 годы
+filtered_df = df[(df['YEAR'] >= 1961) & (df['YEAR'] <= 1970)]
+
+# Создание фигуры с двумя субплoтами
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10))
+
+# --- График 1: Мировое потребление меди ---
+ax1.plot(
+    filtered_df['YEAR'], 
+    filtered_df['WORLDCONSUMPTION'], 
+    label='Мировое потребление (тыс. тонн)', 
+    color='blue', 
+    marker='o',
+    linestyle='-'
+)
+
+# Настройки для первого графика
+ax1.set_title('Динамика мирового потребления меди (1961–1970)', fontsize=14)
+ax1.set_xlabel('Год', fontsize=12)
+ax1.set_ylabel('Потребление, тыс. тонн', fontsize=12)
+ax1.grid(True, linestyle='--', alpha=0.7)
+ax1.legend()
+ax1.set_xticks(filtered_df['YEAR'])
+
+# --- График 2: Цены на медь и алюминий ---
+ax2.plot(
+    filtered_df['YEAR'], 
+    filtered_df['COPPERPRICE'], 
+    label='Цена на медь ($/тонн)', 
+    color='green', 
+    marker='s',
+    linestyle='--'
+)
+
+ax2.plot(
+    filtered_df['YEAR'], 
+    filtered_df['ALUMPRICE'], 
+    label='Цена на алюминий ($/тонн)', 
+    color='red', 
+    marker='^',
+    linestyle='-.'
+)
+
+# Настройки для второго графика
+ax2.set_title('Динамика цен на медь и алюминий (1961–1970)', fontsize=14)
+ax2.set_xlabel('Год', fontsize=12)
+ax2.set_ylabel('Цена, $/тонн', fontsize=12)
+ax2.grid(True, linestyle='--', alpha=0.7)
+ax2.legend()
+ax2.set_xticks(filtered_df['YEAR'])
+
+# Общие настройки
+plt.tight_layout()  # Автоматическое выравнивание
+plt.show()
+```
+---
+
+#### **Результат**
+Первый график:
+- Синяя линия: Мировое потребление меди.
+Второй график:
+- Зеленая линия: Цена на медь.
+- Красная линия: Цена на алюминий.
+
+
+
+
+### Инструменты
+
+####Библиотеки:
+matplotlib.pyplot — базовые функции визуализации.
+seaborn — улучшенные стили графиков (для диаграммы рассеяния).
+statsmodels.datasets — загрузка стандартных наборов данных (Китай, Нил).
+pandas — обработка и фильтрация данных.
+
+####Алгоритмы:
+Для диаграммы рассеяния:
+ - Использование sns.scatterplot с параметрами:
+---
 ## Лабораторная работа 4 BioPython
 ### Цель работы
 Обработка биологических данных в формате GenBank с использованием библиотеки Biopython:
@@ -92,17 +407,23 @@ Expected dominant offspring: 3.50000
 #### Цель задания 2
 Анализ и сортировка последовательностей по GC-составу.
 #### Цель задания 3
-Трансляция кодирующих областей (CDS) в белковые последовательности.
+Извлечение нужной информации из файла формата GenBank.
 
 ---
 
 ### **Задачи**  
-1.1 Соормировать исходный файл формата GenBank.
-2.1 Реализовать чтение и парсинг файла формата GenBank.  
-2.2. Извлечь последовательности ДНК и их метаданные (ID, описание).  
-2.3. Вычислить GC-состав для каждой последовательности.  
-4. Найти последовательность с максимальным значением GC.  
-5. Оформить вывод результатов в требуемом формате.  
+#### **Первого задания:**
+1. Соормировать исходный файл формата GenBank. 
+#### **Второго задания:**
+1. Реализовать чтение и парсинг файла формата GenBank.  
+2. Извлечь последовательности ДНК и их метаданные (ID, описание).  
+3. Вычислить GC-состав для каждой последовательности.  
+4. Oтсортировать их по возрастанию этого значения.
+5. Оформить вывод результатов в требуемом формате.
+#### **Третьего задания:**
+1. Реализовать чтение и парсинг файла формата GenBank.  
+2. Извлечь метаданные последовательностей ДНК (ID, описание, продукт трянсляции).
+3. Оформить вывод результатов в требуемом формате.
 
 ---
 
@@ -161,152 +482,116 @@ GC=Amount(G+C)/SequenceLength
 **calculate_gc:** Вычисляет процент GC для данной последовательности.
 **parse_genbank:** Функция читает файл, разделяет его на записи и извлекает последовательности из раздела `ORIGIN`.
 ```python
-
-def parse_genbank(file_path):
-
-with open(file_path, 'r') as file:
-
-content = file.read()
-
-records = content.split('//\n')  # Разделяем записи по //
-
-sequences = []
-
-for record in records:
-
-if 'ORIGIN' not in record:
-
-continue
-
-# Извлекаем раздел ORIGIN
-
-origin_start = record.find('ORIGIN')
-
-origin_section = record[origin_start:]
-
-# Извлекаем строки последовательности
-
-lines = origin_section.split('\n')[1:]  # Пропускаем строку с ORIGIN
-
-sequence = []
-
-for line in lines:
-
-if line.strip() == '':  # Пропускаем пустые строки
-
-continue
-
-# Удаляем номера позиций и пробелы, оставляем только буквы
-
-seq_part = ''.join([c for c in line if c.isalpha()])
-
-sequence.append(seq_part.upper())  # Приводим к верхнему регистру
-
-full_sequence = ''.join(sequence)
-
-sequences.append(full_sequence)
-
-return sequences
-
-def calculate_gc(sequence):
-
-g = sequence.count('G')
-
-c = sequence.count('C')
-
-total = len(sequence)
-
-return (g + c) / total * 100 if total > 0 else 0.0
-
-# Основной код обрабатывает файл, вычисляет GC-состав для каждой последовательности, сортирует и выводит результат.
-
-
-file_path = 'sequence.gb.txt'
-
-sequences = parse_genbank(file_path)
-
-# Создаем список кортежей (GC%, последовательность)
-
-gc_sequences = [(calculate_gc(seq), seq) for seq in sequences]
-
-# Сортируем по возрастанию GC%
-
-sorted_sequences = sorted(gc_sequences, key=lambda x: x[0])
-
-# Вывод результатов
-
-for gc, seq in sorted_sequences:
-
-print(f"GC-состав: {gc:.2f}%")
-
-print(f"Последовательность: {seq[:50]}...")  # Выводим первые 50 символов для краткости
-
-print()
-
-```
-```
 from Bio import SeqIO
 from Bio.SeqUtils import gc_fraction
 
+
 def read_genbank(file_path):
-    """Читает файл GenBank и возвращает список записей с GC-составом"""
     records = []
     with open(file_path, "r") as handle:
         for record in SeqIO.parse(handle, "genbank"):
-            gc = gc_fraction(record.seq)  # Доля GC без умножения на 100
-            description = " ".join(record.description.split())  # Убираем лишние пробелы
-            records.append((gc, record.id, description))
+            sequence = str(record.seq).upper()  # Последовательность в верхнем регистре
+            gc = gc_fraction(sequence)
+            description = " ".join(record.description.split())            
+            records.append((gc, sequence, record.id,description))
     return records
+
 
 def main():
     file_path = "sequence.gb.txt"
     records = read_genbank(file_path)
-    
+
     # Сортировка по возрастанию GC-состава
     sorted_records = sorted(records, key=lambda x: x[0])
-    
-    # Вывод в требуемом формате
-    for gc_value, seq_id, description in sorted_records:
-        print(f"{seq_id}: {description}, GC = {gc_value}")
 
+    # Вывод результатов
+    for gc, seq, seq_id, description in sorted_records:
+        print(f"{seq_id}: {description}, GC = {gc}")
+        print(f"Последовательность (первые 50 символов): {seq[:50]}...\n")
+        
 if __name__ == "__main__":
     main()
 ```
 **Проверка корректности:**
 
-- Убедитесь, что все последовательности из файла корректно извлечены.
+- Убедиться, что все последовательности из файла корректно извлечены.
 
-- Проверьте, что расчет GC-состава верен (например, для последовательности с 50% GC результат должен быть 50.00%).
+- Проверить, что расчет GC-состава верен (например, для последовательности с 50% GC результат должен быть 50.00%).
 
-**5. Форматирование вывода**  
-Результат выводится в формате:  
+#### Задание 3: Трансляция
+1. Прочитать файл GenBank и извлечь все записи.
+2. Для каждой записи найти все CDS.
+3. Для каждого CDS определить местоположение и направление (плюс или минус цепь).
+4. Извлечь готовые translation из блока FEATURES
+**Kод, который использует готовые переводы из блока FEATURES:**
+
+```python
+from Bio import SeqIO
+from Bio.SeqFeature import CompoundLocation
+
+def format_location(feature):
+    """Форматирует локацию в стиле GenBank"""
+    if isinstance(feature.location, CompoundLocation):
+        parts = [f"{part.start+1}:{part.end}" for part in feature.location.parts]
+        return f"join({', '.join(parts)})"
+    return f"{feature.location.start+1}:{feature.location.end}"
+
+def get_translation(feature):
+    """Извлекает перевод из квалификаторов или возвращает None"""
+    translation = feature.qualifiers.get("translation", [None])[0]
+    
+    if translation:
+        # Объединяем многострочные переводы и удаляем пробелы
+        return "".join(translation.split())
+    return None
+
+def main():
+    for record in SeqIO.parse("sequence.gb.txt", "genbank"):
+        print(f"{record.id}: {record.description}")
+        
+        for i, feature in enumerate(record.features, 1):
+            if feature.type == "CDS":
+                # Извлекаем информацию из квалификаторов
+                strand = "+" if feature.location.strand >= 0 else "-"
+                protein_id = feature.qualifiers.get("protein_id", ["unknown"])[0]
+                product = feature.qualifiers.get("product", ["unknown"])[0]
+                
+                # Получаем готовый перевод или вычисляем
+                translation = get_translation(feature)
+                
+                print(f"\nCDS {i}: {product} (Protein ID: {protein_id})")
+                print(f"Location: [{format_location(feature)}]({strand})")
+                print(f"Translation:\n{translation}\n")
+
+if __name__ == "__main__":
+    main()
 ```
-<ID>: <Описание>, GC = <значение>
-```  
-Значение GC округляется до 6 знаков после запятой.  
 
----
-
-#### **Пример работы программы**  
-**Входные данные** (фрагмент файла GenBank):  
-```genbank
-LOCUS       JN626959                 419 bp    mRNA    linear   INV 06-DEC-2012
-DEFINITION  Nasonia vitripennis clone navitri-4 navitripenicin mRNA, complete cds.
-ORIGIN      
-        1 ttggtggcat tttcatcggc tagcatcgat cattctgtag aacagcag...
-```  
-
-**Вывод**:  
+Пример вывода для одной из записей:
 ```
-JN626959.1: Nasonia vitripennis clone navitri-4 navitripenicin mRNA, complete cds, GC = 42.506937
-```  
+JN626959.1: Nasonia vitripennis clone navitri-4 navitripenicin mRNA, complete cds
 
----
+CDS 1: navitripenicin (Protein ID: AEO53066.1)
+Location: [1:324](+)
+Translation:
+MVAFSSAASIDHSVEQQSIADHSEEQIIYVDGVPVNEIVRRTLRSGNGKITFEVKNEGGQTSFTVNGEAKVWSSKNGYVSVTGGVHQPIGGDAKGHVGVKGEFEWRK
+```
+
+##### Ключевые особенности:
+1. Извлечение информации напрямую из полей GenBank:
+   - `translation` - готовая белковая последовательность
+   - `protein_id` - идентификатор белка
+   - `product` - название белка
+
+2. Форматирование сложных локаций (join-операторы)
+
+3. Обработка многострочных переводов (удаление пробелов и объединение строк)
+
+4. Отображение дополнительной метаинформации о белке
 
 #### **Выводы**  
 1. Задача успешно решена с использованием библиотеки Biopython, что упростило обработку биологических данных.  
 2. Код эффективно работает с файлами GenBank любого размера благодаря итеративному чтению.  
-3. Решение можно расширить для анализа других параметров (например, длины последовательностей).  
-4. Использование ООП позволило бы улучшить структуру кода (например, создать класс `Sequence` с атрибутами `id`, `description`, `gc`).  
+3. Использование ООП позволило бы улучшить структуру кода (например, создать класс `Sequence` с атрибутами `id`, `description`, `gc`).  
 
 --- 
