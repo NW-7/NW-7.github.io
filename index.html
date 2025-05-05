@@ -110,6 +110,38 @@
              background: #DC2626;
              transform: scale(1.05);
          }
+
+        .task-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        }
+
+        .task {
+            background: rgba(239, 68, 68, 0.05);
+            padding: 1.2rem;
+            border-radius: 0.8rem;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .task h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+        
+        .task-separator {
+            height: 1px;
+            background: rgba(0,0,0,0.1);
+            margin: 0.5rem 0;
+        }
+        
+        .task .lab-link {
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            margin-top: 0.8rem;
+        } 
  
          footer {
              margin-top: 4rem;
@@ -128,6 +160,8 @@
                  font-size: 1.875rem;
              }
          }
+
+       
      </style>
    
 </head>
@@ -154,8 +188,21 @@
             </div>
             <div class="lab-card">
                 <h2 class="lab-title">Лабораторная работа 3</h2>
-                <p>Вариант 4</p>
-                <a href="lab3.py" class="lab-link" download>Скачать lab3</a>
+    
+                <div class="task-group">
+                    <div class="task">
+                        <h3>Задание 1. Вариант 4</h3>
+                        <p>Реализация алгоритма поиска кратчайшего пути</p>
+                        <a href="lab3_task1_var4.py" class="lab-link" download>Скачать задание 1</a>
+                    </div>
+        
+        <div class="task-separator"></div>
+                    <div class="task">
+                        <h3>Задание 2. Вариант 2</h3>
+                        <p>Анализ временной сложности алгоритмов</p>
+                        <a href="lab3_task2_var2.py" class="lab-link" download>Скачать задание 2</a>
+                    </div>
+                </div>
             </div>
             <div class="lab-card">
                 <h2 class="lab-title">Лабораторная работа 4</h2>
