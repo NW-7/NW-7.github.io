@@ -1,0 +1,602 @@
+LOCUS       JN626959                 419 bp    mRNA    linear   INV 06-DEC-2012
+DEFINITION  Nasonia vitripennis clone navitri-4 navitripenicin mRNA, complete
+            cds.
+ACCESSION   JN626959
+VERSION     JN626959.1
+KEYWORDS    .
+SOURCE      Nasonia vitripennis (jewel wasp)
+  ORGANISM  Nasonia vitripennis
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Proctotrupomorpha; Chalcidoidea; Pteromalidae; Pteromalinae;
+            Nasonia.
+REFERENCE   1  (bases 1 to 419)
+  AUTHORS   Zhu,K., Gao,B. and Zhu,S.
+  TITLE     Characterization of a chimeric antimicrobial peptide uncovers
+            evolutionary significance of exon-shuffling
+  JOURNAL   Biochem. Biophys. Res. Commun. 428 (3), 360-364 (2012)
+   PUBMED   23103428
+REFERENCE   2  (bases 1 to 419)
+  AUTHORS   Zhu,S., Zhu,K. and Gao,B.
+  TITLE     Molecular cloning of navitripenicin, a new antimicrobial peptide in
+            Nasonia vitripennis
+  JOURNAL   Unpublished
+REFERENCE   3  (bases 1 to 419)
+  AUTHORS   Zhu,S., Zhu,K. and Gao,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (28-AUG-2011) Institute of Zoology, Chinese Academy of
+            Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101,
+            China
+FEATURES             Location/Qualifiers
+     source          1..419
+                     /organism="Nasonia vitripennis"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7425"
+                     /clone="navitri-4"
+                     /PCR_primers="fwd_name: navitri-fn, fwd_seq:
+                     ttggtggcattttcatcg, rev_name: 3ap, rev_seq:
+                     ctgatctagaggtaccggatcc"
+     CDS             1..324
+                     /note="antimicrobial peptide"
+                     /codon_start=1
+                     /product="navitripenicin"
+                     /protein_id="AEO53066.1"
+                     /translation="MVAFSSAASIDHSVEQQSIADHSEEQIIYVDGVPVNEIVRRTLR
+                     SGNGKITFEVKNEGGQTSFTVNGEAKVWSSKNGYVSVTGGVHQPIGGDAKGHVGVKGE
+                     FEWRK"
+ORIGIN      
+        1 ttggtggcat tttcatcggc agcaagtatc gatcattctg tagaacagca gagtatagct
+       61 gaccattccg aagaacagat tatctacgtc gatggtgtcc cagtaaacga gatcgttcgc
+      121 cgaacactga gatctggaaa cggaaagatc acttttgaag ttaaaaatga aggtggacag
+      181 acttcgttta ccgtgaacgg agaggctaag gtttggagca gcaaaaatgg ttacgtcagc
+      241 gtgacaggcg gtgtacatca gccaataggt ggtgacgcta aaggacacgt tggagttaag
+      301 ggcgaattcg aatggagaaa gtgaagttag aattatttaa tttttttgta cttacgaata
+      361 tttaaaattt gatatattaa aaaatcttaa tccagtaaaa aaaaaaaaaa aaaaaaaaa
+//
+
+LOCUS       JQ661326                 601 bp    RNA     linear   INV 13-MAY-2012
+DEFINITION  Nasonia vitripennis defensin 2-2a3 precursor, precursor RNA,
+            complete cds.
+ACCESSION   JQ661326
+VERSION     JQ661326.1
+KEYWORDS    .
+SOURCE      Nasonia vitripennis (jewel wasp)
+  ORGANISM  Nasonia vitripennis
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Proctotrupomorpha; Chalcidoidea; Pteromalidae; Pteromalinae;
+            Nasonia.
+REFERENCE   1  (bases 1 to 601)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     A pre-mRNA from Nasonia vitripennis adults that encodes an insect
+            defensin (Navidefensin2-2a3) that contains an intron
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 601)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (10-FEB-2012) Institute of Zoology, Chinese Academy of
+            Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101,
+            China
+FEATURES             Location/Qualifiers
+     source          1..601
+                     /organism="Nasonia vitripennis"
+                     /mol_type="transcribed RNA"
+                     /db_xref="taxon:7425"
+                     /PCR_primers="fwd_name: navidef2-2f, fwd_seq:
+                     atgaaggtcctcgttgttttg, rev_name: 3ap, rev_seq:
+                     ctgatctagaggtaccggatcc"
+     precursor_RNA   1..601
+                     /product="defensin 2-2a3 precursor"
+                     /note="partially processed mRNA"
+     CDS             join(1..100,168..424)
+                     /note="Navidefensin2-2a3 precursor"
+                     /codon_start=1
+                     /product="defensin 2-2a3 precursor"
+                     /protein_id="AFJ22694.1"
+                     /translation="MKVLVVLAACAVFAGAFGATRIRDGHEDPVFEILGDDIKQDGDN
+                     AETVDATDDLSPIKESSDDPTELVQPSYRDRRFSCDVLSLQSKWVSPNHSACAVRCLA
+                     QRRKGGKCKNGDCVCR"
+     sig_peptide     1..57
+     mat_peptide     296..421
+                     /product="defensin 2-2a3"
+     intron          101..167
+ORIGIN      
+        1 atgaaggtcc tcgttgtttt ggctgcttgc gctgttttcg ccggagcttt cggcgctact
+       61 agaattcgcg atggccacga ggatcccgtc tttgaaattc gtaaatgcat atctgtttag
+      121 atgaaaaata atttattcat cattcaaaac tctcgattcg tacgcagtag gagacgacat
+      181 caagcaagac ggcgataacg ccgagacggt cgacgccacg gacgatctct ccccaatcaa
+      241 ggagtcttca gacgatccga cagagctcgt acagccttct tacagagatc gtcgcttctc
+      301 ctgcgacgtc ctgtccctcc agagcaagtg ggtctcgccg aatcactcgg cctgtgccgt
+      361 caggtgtcta gcccagcgtc gcaagggggg aaagtgcaag aacggagact gcgtctgccg
+      421 ataaggatct cgagttgttt tatgaaggag gccggattct tgaagtgcat ttatttattt
+      481 tttggctgat cttttttcta tacaatactc gcctggactc atgtaattta tgcttgttat
+      541 ataaacacgt tatgaataaa attttataca cgtttacaat gtaaaaaaaa aaaaaaaaaa
+      601 a
+//
+
+LOCUS       JQ661325                 534 bp    mRNA    linear   INV 13-MAY-2012
+DEFINITION  Nasonia vitripennis defensin 2-2a2 precursor, mRNA, complete cds.
+ACCESSION   JQ661325
+VERSION     JQ661325.1
+KEYWORDS    .
+SOURCE      Nasonia vitripennis (jewel wasp)
+  ORGANISM  Nasonia vitripennis
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Proctotrupomorpha; Chalcidoidea; Pteromalidae; Pteromalinae;
+            Nasonia.
+REFERENCE   1  (bases 1 to 534)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     A cDNA clone from Nasonia vitripennis adults that encodes an insect
+            defensin (Navidefensin2-2a2)
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 534)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (10-FEB-2012) Institute of Zoology, Chinese Academy of
+            Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101,
+            China
+FEATURES             Location/Qualifiers
+     source          1..534
+                     /organism="Nasonia vitripennis"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7425"
+                     /PCR_primers="fwd_name: navidef2-2f, fwd_seq:
+                     atgaaggtcctcgttgttttg, rev_name: 3ap, rev_seq:
+                     ctgatctagaggtaccggatcc"
+     CDS             1..357
+                     /note="Navidefensin2-2a2 precursor"
+                     /codon_start=1
+                     /product="defensin 2-2a2 precursor"
+                     /protein_id="AFJ22693.1"
+                     /translation="MKVLVVLAACAVFAGAFGATRIRDGYEDPVFEILGDDIKQDGDN
+                     AETVDATDDLSPIKESSDDPTELVQPSYRDRRFSCDVLSFQSKRVLPNHSACAVRCLA
+                     QRREGGKCKNGDCVCR"
+     sig_peptide     1..57
+     mat_peptide     229..354
+                     /product="defensin 2-2a2"
+ORIGIN      
+        1 atgaaggtcc tcgttgtttt ggctgcttgc gctgttttcg ccggagcttt cggcgctact
+       61 agaattcgcg atggctacga ggatcccgtc tttgaaattc taggagacga catcaagcaa
+      121 gacggcgata acgccgagac ggtcgacgcc acggacgatc tctccccaat caaggagtct
+      181 tcagacgatc cgacagagct cgtacagcct tcatacagag atcgtcgctt ctcctgcgac
+      241 gtcctgtcct tccagagcaa gcgggtcttg ccgaatcact cggcctgtgc cgtcaggtgt
+      301 ctagcccagc gtcgcgaggg aggaaagtgc aagaacggag actgcgtctg ccgataagga
+      361 tctcgagttg ttttatgaag gaggctggat tcttgaagtg catttattta tttttcggct
+      421 ggtctttttt ctatacaata ctcgcctgga ctcatgtaat ttatgcttgt tatataaaca
+      481 cgttatgaat aaaattttat acacgtttac aatgtaaaaa aaaaaaaaaa aaaa
+//
+
+LOCUS       JQ617293                 539 bp    mRNA    linear   INV 13-MAY-2012
+DEFINITION  Nasonia vitripennis defensin 2-2a precursor, mRNA, complete cds.
+ACCESSION   JQ617293
+VERSION     JQ617293.1
+KEYWORDS    .
+SOURCE      Nasonia vitripennis (jewel wasp)
+  ORGANISM  Nasonia vitripennis
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Proctotrupomorpha; Chalcidoidea; Pteromalidae; Pteromalinae;
+            Nasonia.
+REFERENCE   1  (bases 1 to 539)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     A cDNA clone from Nasonia vitripennis adults that encodes an insect
+            defensin (Navidefensin2-2a)
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 539)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-FEB-2012) Institute of Zoology, Chinese Academy of
+            Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101,
+            China
+FEATURES             Location/Qualifiers
+     source          1..539
+                     /organism="Nasonia vitripennis"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7425"
+                     /PCR_primers="fwd_name: navidef2-2f, fwd_seq:
+                     atgaaggtcctcgttgttttg, rev_name: 3ap, rev_seq:
+                     ctgatctagaggtaccggatcc"
+     CDS             1..357
+                     /note="Navidefensin2-2a precursor"
+                     /codon_start=1
+                     /product="defensin 2-2a precursor"
+                     /protein_id="AFJ22691.1"
+                     /translation="MKVLVVLAACAVFAGAFGATRIRDGYEDPVFEILGDDIKRDGDN
+                     AETVDATDDLSPIKESSDDPTELVQPSYRDRRFSCDVLSFQSKWVSPNHSACAVRCQA
+                     QRRKGGKCKNGDCVCR"
+     sig_peptide     1..54
+     mat_peptide     229..354
+                     /product="defensin 2-2a"
+ORIGIN      
+        1 atgaaggtcc tcgttgtttt ggctgcttgc gctgttttcg ccggagcttt cggcgctact
+       61 agaattcgcg atggctacga ggatcccgtc tttgaaattc taggagacga catcaagcga
+      121 gacggcgata acgccgagac ggtcgacgcc acggacgatc tctccccaat caaggagtct
+      181 tcagacgatc cgacagagct cgtacagcct tcttacagag atcgtcgctt ctcctgcgac
+      241 gtcctgtcct tccagagcaa gtgggtctcg ccgaatcact cggcctgtgc cgtcaggtgt
+      301 caagcccagc gtcgcaaggg aggaaagtgc aagaacggag actgcgtctg ccgataagga
+      361 tctcgagttg ttttatgaag gaggctggat tcttgaagtg catttattta ttttttggct
+      421 gatctttttt ctatacaata ctcgcctgga ctcatgtaat ttatgcttgt tatataaaca
+      481 cgtcatgaat aaaattttat acacgtttac aatgtaaaaa aaaaaaaaaa aaaaaaaaa
+//
+
+LOCUS       MT063190                2211 bp    mRNA    linear   INV 04-DEC-2020
+DEFINITION  Nasonia vitripennis WOM mRNA, complete cds.
+ACCESSION   MT063190
+VERSION     MT063190.1
+KEYWORDS    .
+SOURCE      Nasonia vitripennis (jewel wasp)
+  ORGANISM  Nasonia vitripennis
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Proctotrupomorpha; Chalcidoidea; Pteromalidae; Pteromalinae;
+            Nasonia.
+REFERENCE   1  (bases 1 to 2211)
+  AUTHORS   Zou,Y., Geuverink,E., Beukeboom,L.W., Verhulst,E.C. and van de
+            Zande,L.
+  TITLE     A chimeric gene paternally instructs female sex determination in
+            the haplodiploid wasp Nasonia
+  JOURNAL   Science 370 (6520), 1115-1118 (2020)
+   PUBMED   33243892
+REFERENCE   2  (bases 1 to 2211)
+  AUTHORS   Zou,Y., Geuverink,E., Beukeboom,L.W., Verhulst,E.C. and van de
+            Zande,L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (12-FEB-2020) Evolutionary Genetics, Groningen Institute
+            for Evolutionary Life Sciences (GELIFES), University of Groningen,
+            Nijenborgh 7 Building 5172, Room 676, Groningen, Groningen 9747 AG,
+            The Netherlands
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2211
+                     /organism="Nasonia vitripennis"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7425"
+     CDS             334..2076
+                     /note="womanizer; no splice variant, instructor gene in
+                     Nasonia vitripennis sex determination"
+                     /codon_start=1
+                     /product="WOM"
+                     /protein_id="QNH85213.1"
+                     /translation="MDNYFDAAAFLSSNPNLPPVSTLLEYTYPNFSMPYHESQDSFYY
+                     NDAQTNAVAPDDRSKKSGYTEANAQYREQEVTSKAVPAIEPMTNEAPTISTNPDDFSG
+                     ELNFQLFINRDECYKKSFVYSKQLRKVFLSMNKVLPVQFSWQNSSFNLRVRACMIFQA
+                     SHSRDKPVQRCRAHKAIDLEENNHVESLPMKFTFRTYQRGSLYQEDTNNGFLSIVTPT
+                     GLLNPGRDYFQIDYVFYCNTSCVTGINRRATFLVFTLENENGFVYGRQSLLIQICCCP
+                     KRDAKKEENKTSSPRDKRKINRVKKVEKPDLYPVPRPHCISRSQQSSSKLPQTMKKLP
+                     QRTTNYPQPAFRLPQSIAHLPQYISGLQQSSTSLPQPSINLPQPTENFPQLVIRSSQP
+                     MANFPQYIPNLQQTSASLPEPRSDAPHSTLRSSQSTSNFPQYMPSVHQPSTNLPQRIM
+                     NWSEPTENSPQYTLNYQEPSTSFQQSMMNLPESTAKWPQPTISLPQLTNDVSNSTSTM
+                     SNDKIVEQFNMNLLVYGGENSLAIMTFSYKMMLREAYESNDFARYREVLDNTKQRIEE
+                     LQREILQRDADSSL"
+ORIGIN      
+        1 tcgtgaatca gttacggcct ggccgccggg tcgaacagac ctagacatct tgtacataaa
+       61 taattacagt ctagtcacaa tcagctctca gcattgtctt tattctttgt acctggtccg
+      121 ttcgcctttc cctaccgtat ctcctattag ggagcgtaga agatagagag acctagtcat
+      181 cctcaactct ctaaagatgc aagaggagat catcagttct tcgcagttgc tgaatgagga
+      241 cacaagcttc ttgagtctgt tataagactc gatttgtgcc cgtcctcttc tttctgatgg
+      301 aatatagttt ggctttgaat aattttctca gccatggata attactttga cgcggcggcg
+      361 tttttgtcgt cgaacccaaa tttgccgcca gtatcaactt tacttgaata cacctacccg
+      421 aatttctcaa tgccttatca tgagagccaa gactcctttt attacaatga cgcacagaca
+      481 aatgcagtcg ctccggacga tcgtagtaaa aagtccggat acaccgaagc caacgcgcag
+      541 tacagagaac aagaagtcac gtcaaaagct gtacccgcaa tagagccgat gacaaatgaa
+      601 gcgccaacga tttcaactaa tccagacgat ttttccggag aactaaattt tcaacttttc
+      661 atcaaccgtg acgagtgcta taaaaaatct tttgtgtatt caaagcaact ccgcaaagtg
+      721 ttcctaagta tgaataaggt gctgccagtg caattttctt ggcaaaatag ctcgttcaac
+      781 ctgcgtgtcc gagcgtgcat gatctttcag gctagtcata gtcgcgataa accagtccaa
+      841 cgctgccgag cccacaaggc aatcgacttg gaagaaaata atcacgtcga atcactgcca
+      901 atgaaattta cgtttaggac ctaccaacga ggtagcttgt accaagaaga tacaaataat
+      961 ggatttttat cgattgtaac gcctacagga ctgctgaatc ctggccgtga ttacttccaa
+     1021 atagactacg ttttctattg caataccagc tgcgttactg gcatcaacag gagagcgaca
+     1081 tttttggttt ttacactcga gaacgaaaat ggattcgtct atggaagaca atcactttta
+     1141 atacaaattt gctgttgtcc gaaaagagat gcgaaaaagg aagagaataa aacgtcgagt
+     1201 ccccgtgaca agcgaaaaat caatagagtc aaaaaagtag aaaagccgga tctttatcca
+     1261 gtaccacggc cgcattgtat atcgaggtca cagcagtcgt catcgaaatt gccacagacg
+     1321 atgaaaaagt tgccacaacg aacgacgaac tatccacagc cagcgttcag attgccgcag
+     1381 tcaattgcac acttgccaca atacatatca ggcttacagc agtcatcaac aagcctgccg
+     1441 caaccatcga taaatttgcc gcagccaacg gaaaattttc cacagctagt gatcagatcg
+     1501 tcgcagccaa tggcaaactt tccacaatat ataccaaatt tacagcagac atcggcgagc
+     1561 ttgccggagc caaggtcaga tgcaccgcac tcaacgctca gatcgtcgca gtcaacgtca
+     1621 aactttccgc aatatatgcc aagtgtacac cagccgtcaa cgaacttgcc acaacgaata
+     1681 atgaactggt cagagccaac agaaaattcg ccacaatata cactaaacta tcaagaacca
+     1741 tcaacgagct ttcaacaatc aatgatgaat ttgccagagt caacggcaaa gtggccacag
+     1801 ccaactatca gcttgccgca gctcacgaac gacgtgtcaa attcaacatc aacgatgtct
+     1861 aacgataaga ttgttgaaca gttcaatatg aatttactag tttatggagg cgaaaattcc
+     1921 ttggctataa tgacattctc ttataagatg atgttaagag aggcatacga aagcaatgat
+     1981 tttgcaaggt atcgagaggt gctcgataac acaaagcaaa ggattgaaga gctgcaaagg
+     2041 gaaatcttgc aaagagatgc agactcatcg ttgtaataag atttgggttc gtgtatcgtg
+     2101 tatgtatgta tatatgtata tattgtgaaa atattcgtga atgtaaatat aaggtttata
+     2161 cgcatatgta tataaaatta gaatagtgta ataaaattta aatttaaaat c
+//
+
+LOCUS       AB252421                 644 bp    mRNA    linear   INV 17-MAY-2011
+DEFINITION  Apis mellifera GB15078 mRNA, complete cds.
+ACCESSION   AB252421
+VERSION     AB252421.1
+KEYWORDS    .
+SOURCE      Apis mellifera (honey bee)
+  ORGANISM  Apis mellifera
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Apis.
+REFERENCE   1
+  AUTHORS   Yamazaki,Y., Shirai,K., Paul,R.K., Fujiyuki,T., Wakamoto,A.,
+            Takeuchi,H. and Kubo,T.
+  TITLE     Differential expression of HR38 in the mushroom bodies of the
+            honeybee brain depends on the caste and division of labor
+  JOURNAL   FEBS Lett. 580 (11), 2667-2670 (2006)
+   PUBMED   16647071
+REFERENCE   2  (bases 1 to 644)
+  AUTHORS   Yamazaki,Y. and Kubo,T.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2006) Contact:Yurika Yamazaki-Shiota University
+            of Tokyo, Department of Biological Sciences, Graduate School of
+            Sciences; Hongo 7-3-1, Bunkyo-ku, Tokyo 113-0033, Japan
+FEATURES             Location/Qualifiers
+     source          1..644
+                     /organism="Apis mellifera"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7460"
+                     /clone="p61A7"
+                     /tissue_type="brain"
+                     /clone_lib="Apis mellifera brain adult cDNA clone"
+                     /dev_stage="adult"
+     gene            1..644
+                     /gene="GB15078"
+     5'UTR           <1..81
+                     /gene="GB15078"
+     CDS             82..450
+                     /gene="GB15078"
+                     /codon_start=1
+                     /protein_id="BAE80739.1"
+                     /translation="MPILIPHRNPASANYYENKDGARIVKASHFELDYMLGRKITFFC
+                     MATGFPRPEITWLKDGIELYHHKFFQVHEWPVGNDTLKSKMEIDPATQKDAGYYECQA
+                     DNQYAVDRRGFRTDYVMISY"
+     3'UTR           451..>644
+                     /gene="GB15078"
+ORIGIN      
+        1 ttagtaagca cagacgcagc aaaaggtggt ggaggtagag gagctagcag acgcagtggc
+       61 ggaagagttt acaagtctcg aatgcctatt ctgattcctc acagaaatcc tgccagtgct
+      121 aattactacg aaaataaaga tggggcgaga atagtgaaag cttcacactt tgaactggat
+      181 tacatgttag gaaggaagat cacatttttc tgcatggcta ctggatttcc aagacctgag
+      241 atcacctggt tgaaagatgg aattgaattg tatcatcata aatttttcca ggtgcatgaa
+      301 tggcctgttg gcaatgacac attaaaatca aagatggaaa ttgatcctgc tacgcaaaaa
+      361 gatgcaggat attatgaatg tcaagcagat aatcagtatg cggttgatcg tcgtggcttt
+      421 agaacggatt atgttatgat ttcttattaa aaaaaaaagt acttctttta taattgcaac
+      481 acttatgtca aacaatataa tttattaact taatagcaca agatttagtg ttataggtat
+      541 taaatttttt ttttaacaaa tttttttaaa tattttcttt ctctcactca tataatagta
+      601 ttttcgtagt attgtaaatt tttataatat caaaaacgtt tcat
+//
+
+LOCUS       AY055108                 356 bp    mRNA    linear   INV 06-NOV-2002
+DEFINITION  Apis mellifera apisimin precursor, mRNA, complete cds.
+ACCESSION   AY055108
+VERSION     AY055108.1
+KEYWORDS    .
+SOURCE      Apis mellifera (honey bee)
+  ORGANISM  Apis mellifera
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Apis.
+REFERENCE   1  (bases 1 to 356)
+  AUTHORS   Bilikova,K., Hanes,J., Nordhoff,E., Saenger,W., Klaudiny,J. and
+            Simuth,J.
+  TITLE     Apisimin, a new serine-valine-rich peptide from honeybee (Apis
+            mellifera L.) royal jelly: purification and molecular
+            characterization
+  JOURNAL   FEBS Lett. 528 (1-3), 125-129 (2002)
+   PUBMED   12297291
+REFERENCE   2  (bases 1 to 356)
+  AUTHORS   Simuth,J., Hanes,J., Bilikova,K. and Klaudiny,J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (10-SEP-2001) Laboratory of Genetic Engineering,
+            Institute of Chemistry, Slovak Academy of Sciences, Dubravska cesta
+            9, Bratislava SK-84238, Slovakia
+FEATURES             Location/Qualifiers
+     source          1..356
+                     /organism="Apis mellifera"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7460"
+                     /note="authority: Apis mellifera L."
+     CDS             53..289
+                     /note="biologically active peptide; antimicrobial agent"
+                     /codon_start=1
+                     /product="apisimin precursor"
+                     /protein_id="AAL15544.1"
+                     /translation="MSKIVAVVVLAAFCVAMLVSDVSAKTSISVKGESNVDVVSQINS
+                     LVSSIVSGANVSAVLLAQTLVNILQILIDANVFA"
+     sig_peptide     53..124
+     mat_peptide     125..286
+                     /product="apisimin"
+     regulatory      335..340
+                     /regulatory_class="polyA_signal_sequence"
+                     /note="putative"
+ORIGIN      
+        1 gcacgaggaa ccgagctttc taaaagcaat tccaaacagc acaaaaatca aaatgagcaa
+       61 aatcgttgct gtcgtcgtcc tagctgcctt ctgcgtagcc atgttggtca gcgatgtgtc
+      121 cgccaaaaca tcaatcagtg tcaaaggcga atcgaacgtg gatgtcgttt cccaaatcaa
+      181 cagtttggtt tcatctatcg tgtctggtgc caacgtgtca gcagtactcc tagctcaaac
+      241 tttagttaat atcctgcaaa ttcttatcga cgctaatgtt ttcgcttaat ttatatattc
+      301 tttagctttg tattgcgcgc atacaacgca ttcgaataaa gtaattaata aaattc
+//
+
+LOCUS       AF481963                 636 bp    mRNA    linear   INV 27-OCT-2002
+DEFINITION  Apis mellifera antennal-specific protein 3c precursor (ASP3c) mRNA,
+            complete cds.
+ACCESSION   AF481963
+VERSION     AF481963.1
+KEYWORDS    .
+SOURCE      Apis mellifera (honey bee)
+  ORGANISM  Apis mellifera
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Apis.
+REFERENCE   1  (bases 1 to 636)
+  AUTHORS   Danty,E., Arnold,G., Huet,J.C., Huet,D., Masson,C. and
+            Pernollet,J.C.
+  TITLE     Separation, characterization and sexual heterogeneity of multiple
+            putative odorant-binding proteins in the honeybee Apis mellifera L.
+            (Hymenoptera: Apidea)
+  JOURNAL   Chem. Senses 23 (1), 83-91 (1998)
+   PUBMED   9530973
+REFERENCE   2  (bases 1 to 636)
+  AUTHORS   Briand,L., Swasdipan,N., Nespoulous,C., Bezirard,V., Blon,F.,
+            Huet,J.C., Ebert,P. and Penollet,J.C.
+  TITLE     Characterization of a chemosensory protein (ASP3c) from honeybee
+            (Apis mellifera L.) as a brood pheromone carrier
+  JOURNAL   Eur. J. Biochem. 269 (18), 4586-4596 (2002)
+   PUBMED   12230571
+REFERENCE   3  (bases 1 to 636)
+  AUTHORS   Ebert,P.R.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (10-FEB-2002) Biochemistry and Molecular Biology,
+            University of Queensland, St Lucia, Queensland 4072, Australia
+FEATURES             Location/Qualifiers
+     source          1..636
+                     /organism="Apis mellifera"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7460"
+                     /sex="sterile female worker"
+                     /tissue_type="antennae"
+                     /dev_stage="adult"
+     gene            1..636
+                     /gene="ASP3c"
+     CDS             40..432
+                     /gene="ASP3c"
+                     /note="ASP3c; putative chemosensory protein; binds large
+                     fatty acids and ester derivatives which are brood
+                     pheromone components"
+                     /codon_start=1
+                     /product="antennal-specific protein 3c precursor"
+                     /protein_id="AAN59784.1"
+                     /translation="MKVSIICLVLMAAIVLVAARPDESYTSKFDNINVDEILHSDRLL
+                     NNYFKCLMDEGRCTAEGNELKRVLPDALATDCKKCTDKQREVIKKVIKFLVENKPELW
+                     DSLANKYDPDKKYRVKFEEEAKKLGINV"
+     sig_peptide     40..102
+                     /gene="ASP3c"
+ORIGIN      
+        1 gaatcgtaca actaatagca gctaacacgt ccagcaatca tgaaggtctc aataatttgt
+       61 ttggtcctta tggcggccat tgtccttgtg gctgctcgtc cagacgaatc ttatacatct
+      121 aaatttgaca atattaatgt ggacgaaatt ctgcatagtg atcgtttgtt gaacaattac
+      181 ttcaagtgtt tgatggatga aggaagatgc acagcagaag gaaatgaact caaacgagtc
+      241 ttgcctgacg ctctggccac cgattgcaaa aaatgcactg acaagcaacg agaggtgatc
+      301 aagaaagtga tcaagttctt ggtcgagaat aaaccagaat tgtgggattc ccttgccaac
+      361 aaatacgacc cagacaagaa gtacagagtc aaattcgagg aagaagcgaa gaagctcggc
+      421 attaatgttt aattcaataa attgagaatc atcattgaag attcatttat aaaattattc
+      481 gaaatcttga tatatatgta gacgatataa taagcagttg tagtaaatat tgaaagaagc
+      541 ggaaaacaat ctcgacgtga caattagtgt aagtttataa caggaataaa attgtttttt
+      601 gtgaaccaaa aaaaaaaaaa aaaaaaaaaa aaaaaa
+//
+
+LOCUS       JN541206                 563 bp    mRNA    linear   INV 01-SEP-2012
+DEFINITION  Apis mellifera clone 3-3 secapin-3 precursor, mRNA, complete cds.
+ACCESSION   JN541206
+VERSION     JN541206.1
+KEYWORDS    .
+SOURCE      Apis mellifera (honey bee)
+  ORGANISM  Apis mellifera
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Apis.
+REFERENCE   1  (bases 1 to 563)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Molecular cloning of a new secapin gene (Apimesecapin-3) with a
+            long 3'UTR in Apis mellifera
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 563)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (02-AUG-2011) Institute of Zoology, Chinese Academy of
+            Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101,
+            China
+FEATURES             Location/Qualifiers
+     source          1..563
+                     /organism="Apis mellifera"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7460"
+                     /clone="3-3"
+                     /PCR_primers="fwd_name: amsecapin-3-f, fwd_seq:
+                     atgagatttcaactttatattc, fwd_name: amsecapin-3-fn, fwd_seq:
+                     ttcatctttgcttctttgtgct, rev_name: 3ap, rev_seq:
+                     ctgatctagaggtaccggatcc"
+     CDS             1..348
+                     /note="Apimesecapin-3; sodium channel blocker"
+                     /codon_start=1
+                     /product="secapin-3 precursor"
+                     /protein_id="AEM44815.1"
+                     /translation="MRFQLYILHLCFFVLVVLTYLSQGQLTTTTTTTEEPATFLQKMH
+                     EAFKKVKENAKISNFHFFDPSTWMPTTTTTEKNPEELTESFDITNRQLITVPVRCPPN
+                     FDFIKGRCREKIL"
+     sig_peptide     1..72
+     mat_peptide     271..345
+                     /product="secapin-3"
+     3'UTR           349..563
+ORIGIN      
+        1 atgagatttc aactttatat tcttcatctt tgcttctttg tgcttgttgt gttgacgtac
+       61 ctttcccagg gacagttgac aacaacaaca accacaaccg aggagcctgc cacttttcta
+      121 caaaagatgc acgaagcgtt caaaaaagtg aaggaaaacg cgaaaatttc taattttcat
+      181 ttcttcgacc cgtcaacttg gatgcccacg acaacaacta cggagaaaaa tccagaagaa
+      241 ttaaccgaaa gtttcgatat aacgaacagg caactgatta cagttcctgt cagatgcccg
+      301 cccaattttg acttcataaa gggaaggtgt cgcgagaaaa ttctataaat tttctttaat
+      361 tcttctacca atcttccaga tatattatac atcgacatat tatttcaatt cacgtaatat
+      421 ataataaaaa atactaattc tcattcctgt tttacaaata gccttcgtaa aggtacacag
+      481 aaaagtgcta aaaaaaaaga gataattctt ccttgtaaca acgttattaa ataaaatata
+      541 atcgatcaaa aaaaaaaaaa aaa
+//
+
+LOCUS       JN541205                 462 bp    mRNA    linear   INV 01-SEP-2012
+DEFINITION  Apis mellifera clone 3-1 secapin-3 precursor, mRNA, complete cds.
+ACCESSION   JN541205
+VERSION     JN541205.1
+KEYWORDS    .
+SOURCE      Apis mellifera (honey bee)
+  ORGANISM  Apis mellifera
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Endopterygota; Hymenoptera; Apocrita;
+            Aculeata; Apoidea; Anthophila; Apidae; Apis.
+REFERENCE   1  (bases 1 to 462)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Molecular cloning of a new secapin gene (Apimesecapin-3) with a
+            short 3'UTR in Apis mellifera
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 462)
+  AUTHORS   Zhu,S. and Gao,B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (02-AUG-2011) Institute of Zoology, Chinese Academy of
+            Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101,
+            China
+FEATURES             Location/Qualifiers
+     source          1..462
+                     /organism="Apis mellifera"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:7460"
+                     /clone="3-1"
+                     /PCR_primers="fwd_name: amsecapin-3-f, fwd_seq:
+                     atgagatttcaactttatattc, fwd_name: amsecapin-3-fn, fwd_seq:
+                     ttcatctttgcttctttgtgct, rev_name: 3ap, rev_seq:
+                     ctgatctagaggtaccggatcc"
+     CDS             1..348
+                     /note="Apimesecapin-3; sodium channel blocker"
+                     /codon_start=1
+                     /product="secapin-3 precursor"
+                     /protein_id="AEM44814.1"
+                     /translation="MRFQLYILHLCFFVLVVLTYLSQGQLTTTTTTTEEPATFLQKMH
+                     EAFKKVKENAKISNFHFFDPSTWMPTTTTTEKNPEELTESFDITNRQLITVPVRCPPN
+                     FDFIKGRCREKIL"
+     sig_peptide     1..72
+     mat_peptide     271..345
+                     /product="secapin-3"
+     3'UTR           349..462
+ORIGIN      
+        1 atgagatttc aactttatat tcttcatctt tgcttctttg tgcttgttgt gttgacgtac
+       61 ctttcccagg gacagttgac aacaacaaca accacaaccg aggagcctgc cacttttcta
+      121 caaaagatgc acgaagcgtt caaaaaagtg aaggaaaacg cgaaaatttc taattttcat
+      181 ttcttcgacc cgtcaacttg gatgcccacg acaacaacta cggagaaaaa tccagaagaa
+      241 ttaaccgaaa gtttcgatat aacgaacagg caactgatta cagttcctgt cagatgcccg
+      301 cccaattttg acttcataaa gggaaggtgt cgcgagaaaa ttctataaat tttctttaat
+      361 tcttctacca atcttccaga tatattatac atcgacatat tatttcaatt cacgtaatat
+      421 ataataaaaa atactaattc tcaaaaaaaa aaaaaaaaaa aa
+//
+
