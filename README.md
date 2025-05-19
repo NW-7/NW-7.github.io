@@ -291,7 +291,7 @@ print(df.head())
 - `COPPERPRICE` (цена на медь),
 - `ALUMPRICE` (цена на алюминий),
 - `TIME` (временная метка, например, год).
-![image](https://github.com/user-attachments/assets/f71cd6c6-aa09-4fb8-8a5b-4705354c8fb9)
+![image](https://github.com/user-attachments/assets/f71cd6c6-aa09-4fb8-8a5b-4705354c8fb9) 
 
 ---
 
