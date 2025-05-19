@@ -379,7 +379,7 @@ plt.show()
 ---
 
 #### **Результат**
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/ee10cdae-31e4-4c25-b8ef-b5b0bf2f88a2)
 
 Первый график:
 - Синяя линия: Мировое потребление меди.
